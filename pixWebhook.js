@@ -13,7 +13,7 @@ const encodedWebhookAuth = Buffer.from(`${webhookUser}:${webhookPassword}`).toSt
 // Função para registrar o webhook
 async function registrarWebhook() {
     const token = await getToken(); // Função que você já tem para obter o token
-    const webhookUrl = "http://localhost:3000/webhooks"; // Substitua pela URL real do seu endpoint
+    const webhookUrl = "https://checkout.technoprofast.com.br"; // Substitua pela URL real do seu endpoint
 
     try {
         const response = await axios.post('https://api.ezzebank.com/v2/webhooks/register', {
